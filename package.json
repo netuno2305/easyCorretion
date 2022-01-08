@@ -1,0 +1,25 @@
+{
+  "name": "easycorreting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/netuno2305/EasyCorreting.git",
+  "author": "netuno2305 <davi230503@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.4",
+    "node-webhooks": "^1.4.2",
+    "textgears-api": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "textgears": "^1.0.0"
+  }
+}
