@@ -3,6 +3,7 @@ const router = express.Router()
 const app = express()
 const authMiddleware = require('../middlewares/auth')
 const redactionService = require("../services/redactionService")
+const themeService = require("../services/themeService")
 
 module.exports = app => app.use('/redaction', router)
 

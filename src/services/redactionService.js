@@ -9,7 +9,7 @@ exports.create = async (request, response) => {
 
         let checksThemeExists = await Theme.findOne({theme: theme}, ["theme"] )
         if(checksThemeExists === null) {
-            return response.status(400).send({error: 'Theme not exists'})
+            return response.status(400).send({error: 'THEME_NOT_EXISTS'})
         }
     
         var composing = {
@@ -23,7 +23,7 @@ exports.create = async (request, response) => {
         return response.status(201).send({redaction})
     }
     catch (err) {
-        return response.status(400).send({error: 'Sending failed'})
+        return response.status(400).send({error: 'SENDING_FAILED'})
     }
 }
 
@@ -34,8 +34,14 @@ exports.list = async (request, response) => {
 }
 
 exports.find = async (request, response) => {
-    const { userId } = request
+    try{
+        const { userId } = request
     const redactionId = request.params.id
     const redaction = await Redaction.findOne({_id: redactionId})
+
     return response.status(200).send({redaction})
+    }
+    catch (err) {
+        return response.status(400).send({error: 'INVALID_ID'})
+    }
 }

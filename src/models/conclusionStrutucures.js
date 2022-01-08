@@ -19,4 +19,4 @@ const ConclusionStructuresSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("conclusionstructures", ConclusionStructuresSchema)
+module.exports = mongoose.model("ConclusionStructures", ConclusionStructuresSchema)

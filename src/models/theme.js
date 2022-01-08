@@ -15,4 +15,4 @@ const ThemeSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("themes", ThemeSchema)
+module.exports = mongoose.model("Theme", ThemeSchema)

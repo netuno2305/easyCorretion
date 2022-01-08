@@ -40,9 +40,9 @@ module.exports = async (id) => {
         
         const hooks = registerHooks()
         hooks.trigger('callback_hook', { name, email, phone, redactionScore: pontuation})
+        
         await Redaction.findByIdAndUpdate(id, {pontuation})
     } catch(err) {
-        console.log(err)
         return "ERROR_IN_GENERATE_PONTUATION"
     }
 }

@@ -11,4 +11,4 @@ const ConnectiveWordsSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("connectiveWords", ConnectiveWordsSchema)
+module.exports = mongoose.model("ConnectiveWords", ConnectiveWordsSchema)
